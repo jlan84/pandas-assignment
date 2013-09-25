@@ -1,0 +1,153 @@
+Id:   43
+ASIN: 0486268780
+  title: Selected Poems (Dover Thrift Editions)
+  group: Book
+  salesrank: 260300
+  similar: 5  0486275507  0486401588  0486272737  0486285537  0486264661
+  categories: 7
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Classics[9882]|Whitman, Walt[9924]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( W )[70044]|Whitman, Walt[70700]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|19th Century[170082]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 2  downloaded: 2  avg rating: 4.5
+    2003-9-17  cutomer: A3FWZ99GUDAJ3L  rating: 4  votes:   6  helpful:   4
+    2005-4-24  cutomer:  AHD101501WCN1  rating: 5  votes:   0  helpful:   0
+
+Id:   6893
+ASIN: 0486272737
+  title: Favorite Poems (Dover Thrift Editions)
+  group: Book
+  salesrank: 311565
+  similar: 5  0486401588  0486285537  0486275507  0486268780  0486266850
+  categories: 4
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Anthologies[10250]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( L )[70033]|Longfellow, Henry Wadsworth[70425]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|19th Century[170082]
+  reviews: total: 5  downloaded: 5  avg rating: 5
+    1999-5-17  cutomer:  ATVPDKIKX0DER  rating: 5  votes:  20  helpful:   1
+    2001-10-31  cutomer: A3QZCA4LTTVGAD  rating: 4  votes:   2  helpful:   2
+    2002-1-20  cutomer: A1JF8PSY0NPSYY  rating: 5  votes:   2  helpful:   2
+    2002-12-4  cutomer: A2EP0QO57Y9YW6  rating: 5  votes:   2  helpful:   2
+    2005-4-28  cutomer:  AHD101501WCN1  rating: 5  votes:   0  helpful:   0
+
+Id:   12433
+ASIN: 0486275507
+  title: The Road Not Taken and Other Poems (Dover Thrift Editions)
+  group: Book
+  salesrank: 26207
+  similar: 5  0486401588  0486285537  0486277909  0486266850  0486268780
+  categories: 5
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( F )[70027]|Frost, Robert[70264]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 9  downloaded: 9  avg rating: 4.5
+    1998-10-14  cutomer: A38S2A9AYWPDLZ  rating: 3  votes:  18  helpful:  17
+    1999-5-1  cutomer:  ALJFE8O7KJXCS  rating: 5  votes:   9  helpful:   8
+    2001-4-15  cutomer: A1W4M6R65UKXM1  rating: 5  votes:  11  helpful:  10
+    2001-10-4  cutomer: A2VD3CYOEMJ6SR  rating: 5  votes:   4  helpful:   4
+    2002-8-8  cutomer: A3IQD2BJG501BW  rating: 5  votes:   6  helpful:   5
+    2002-12-15  cutomer:  AI37YX1U4KB1L  rating: 3  votes:  11  helpful:  10
+    2003-8-1  cutomer: A15T4TWV79KGQI  rating: 5  votes:   6  helpful:   5
+    2004-5-9  cutomer: A2X8SXOK3MD24P  rating: 4  votes:   3  helpful:   2
+    2005-4-28  cutomer:  AHD101501WCN1  rating: 5  votes:   0  helpful:   0
+
+Id:   188277
+ASIN: 1570623694
+  title: Song of Myself (Shambhala Centaur Editions)
+  group: Book
+  salesrank: 513088
+  similar: 5  0895267071  0486277909  0486268780  002411510X  0486284956
+  categories: 7
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Classics[9882]|Whitman, Walt[9924]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( W )[70044]|Whitman, Walt[70700]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|19th Century[170082]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 4  downloaded: 4  avg rating: 2
+    2002-1-8  cutomer:  AK81WLVD5KGUX  rating: 5  votes:  21  helpful:  18
+    2003-4-13  cutomer: A1LOA5GM0L5C2I  rating: 1  votes:  28  helpful:   2
+    2004-1-9  cutomer: A1P6RYBI1YTD2M  rating: 1  votes:  15  helpful:   0
+    2005-5-24  cutomer: A1J2LQPDI4NKRG  rating: 1  votes:   0  helpful:   0
+
+Id:   231040
+ASIN: 1931082340
+  title: Karl Shapiro: Selected Poems (American Poets Project)
+  group: Book
+  salesrank: 488217
+  similar: 5  1566635578  1931082332  1931082715  0374524610  0486268780
+  categories: 4
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 0  downloaded: 0  avg rating: 0
+
+Id:   308852
+ASIN: 0486270637
+  title: Five Great Short Stories (Dover Thrift Editions)
+  group: Book
+  salesrank: 703711
+  similar: 5  0486292797  0486266850  0486264661  0486287602  0486268780
+  categories: 3
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|General[10125]|Classics[10127]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Short Stories[10300]|Anthologies[10303]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( L )[70033]|London, Jack[70424]
+  reviews: total: 1  downloaded: 1  avg rating: 4
+    2001-12-14  cutomer: A1LC7AXT67V8OZ  rating: 4  votes:   0  helpful:   0
+
+Id:   308853
+ASIN: 0781286352
+  title: Rebel Raider (American Autobiography)
+  group: Book
+  salesrank: 2362299
+  similar: 0
+  categories: 0
+  reviews: total: 0  downloaded: 0  avg rating: 0
+
+Id:   375902
+ASIN: 0486264661
+  title: Selected Poems (Dover Thrift Edition)
+  group: Book
+  salesrank: 328506
+  similar: 5  0486401588  0486275507  0486285537  0486268780  0486266850
+  categories: 6
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( D )[70025]|Dickinson, Emily[70210]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|19th Century[170082]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 5  downloaded: 5  avg rating: 2.5
+    2000-4-8  cutomer: A2SVQ31HR1NEVG  rating: 5  votes:  13  helpful:  11
+    2000-8-25  cutomer: A3NDQRWR3Z7X66  rating: 1  votes:  12  helpful:  12
+    2001-6-21  cutomer: A1DGSUJ89KN91K  rating: 5  votes:  15  helpful:  15
+    2004-1-24  cutomer:  AU0FAHK6CQM1B  rating: 1  votes:   0  helpful:   0
+    2004-3-21  cutomer: A20K1B7UZTTO8D  rating: 1  votes:   3  helpful:   3
+
+Id:   439652
+ASIN: 0486414108
+  title: Song of Myself (Dover Thrift Editions)
+  group: Book
+  salesrank: 138292
+  similar: 5  0895267071  0486277909  0486268780  002411510X  0486284956
+  categories: 7
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Classics[9882]|Whitman, Walt[9924]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|20th Century[9972]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|General[10259]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Poetry[10248]|Single Authors[10285]|United States[10287]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|Authors, A-Z[70021]|( W )[70044]|Whitman, Walt[70700]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|19th Century[170082]
+   |Books[283155]|Subjects[1000]|Literature & Fiction[17]|World Literature[10311]|United States[9822]|Poetry[9966]|General[725800]
+  reviews: total: 4  downloaded: 4  avg rating: 2
+    2002-1-8  cutomer:  AK81WLVD5KGUX  rating: 5  votes:  21  helpful:  18
+    2003-4-13  cutomer: A1LOA5GM0L5C2I  rating: 1  votes:  28  helpful:   2
+    2004-1-9  cutomer: A1P6RYBI1YTD2M  rating: 1  votes:  15  helpful:   0
+    2005-5-24  cutomer: A1J2LQPDI4NKRG  rating: 1  votes:   0  helpful:   0
