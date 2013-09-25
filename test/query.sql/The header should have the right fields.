@@ -1,8 +1,0 @@
-#!/bin/sh
-set -e
-FILE=/tmp/amazon-query-head
-
-for var in music book dvd video; do
-  head -n 1 $FILE | grep -i $var
-done
-test $(head -n 1 $FILE | tr , '\n' | wc -l) -eq 4

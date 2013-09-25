@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sqlite3 -csv -header ../../data/amazon.db < ../code/query.sql |
-  head > /tmp/amazon-query-head
