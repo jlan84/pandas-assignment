@@ -78,3 +78,13 @@ __For this exercise, use matplotlib's object oriented API.  We also will be usin
 ![img/similarity.png]
 
 9. Save these figures for posterity.
+
+### Extra credit
+
+Reproduce these plots with [D3.js](http://d3js.org/).
+
+* [example](http://bl.ocks.org/mbostock/388495)
+* [Dashing D3](https://www.dashingd3js.com/)
+* [D3 Tutorial](http://alignedleft.com/tutorials/d3/)
+
+__Call me over if you would like to start diving into D3__
