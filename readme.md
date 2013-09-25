@@ -75,7 +75,7 @@ __For this exercise, use matplotlib's object oriented API.  We also will be usin
 
 8. Follow this same procedure for your similarity matrices.
 
-![img/similarity.png]
+![img/similarity.png](img/similarity.png)
 
 9. Save these figures for posterity.
 
