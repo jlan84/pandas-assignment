@@ -54,9 +54,7 @@ ask further questions to better define what we hope to achieve.
 * Determine what deﬁnes __success__, and to what degree.
 * Brainstorm __metrics__ to visualize and/or calculate.
 * Ask __questions__ that have (or can have) a definitive answer.
-* Be careful what you wish for, be aware of possible __correlations__, and take
-caution with how you [measure](http://en.wikipedia.org/wiki/Observer-
-expectancy_effect) it.
+* Be careful what you wish for, be aware of possible __correlations__, and take caution with how you [measure](http://en.wikipedia.org/wiki/Observer-expectancy_effect) it.
 
 1. Derive three additional questions based on the problem defined
 above.
@@ -176,7 +174,7 @@ even in the least bit.
 #### Expected Output:
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -291,6 +289,11 @@ transformations.  Currently each business has multiple rows in the join table
 (all with the same business_id).  Let us group these records by business and
 only keep the most recent inspection.
 
+![split-apply-combine](http://inundata.org/R_talks/meetup/images/splitapply.png)
+
+### Split-Apply-Combine
+A visual representation of how group-by, aggregate, and apply semantics work
+
 1. Transform the table to only contain each businesses most
 recent inspection
   * Group the resulting join table by the 'business_id' column.
@@ -314,9 +317,6 @@ docs/stable/groupby.html)
 ndas.DataFrame.sort_index.html#pandas.DataFrame.sort_index)
 * [pandas `head`](http://pandas.pydata.org/pandas-
 docs/stable/generated/pandas.DataFrame.head.html#pandas.DataFrame.head)
-
-### Split-Apply-Combine
-A visual representation of how group-by, aggregate, and apply semantics work
 
 __We can bin the restaurants by scores to understand the distribution of
 inspections better.  Here we create a histogram to understand the distribution
@@ -467,6 +467,9 @@ and x-axis ticks/scale.
 * Arrange data such that 'Poor' is plotted as the left-most bar and 'Good' the
 right-most bar.
 * Display the counts of each bin above its associated bar in the histogram.
+* Plot vertical bars for the quartiles, mean, and mode.
+
+![decorated histogram](quantiles.png)
 
 *Relevant resources:*
 
@@ -489,6 +492,200 @@ If we are not satisfied with our evaluation, we need to iterate on our approach:
 ___I will leave this recursive process of iteration (out of the scope of this exercise) as an additional task for the student.  With such analyses as these you can endlessly refine your solution and find new questions to ask... and I whole heartedly encourage all of you to do so!___
 
 ## Extra Credit
+
+### Analyze the violations
+
+* Create a histogram of the violation types (`descriptions`)
+* Find out which restaurants had a perfect score (100) and still had violations
+  * Make a histogram of the violations restaurants with perfect scores received
+* Inspect which violations are considered 'Major'
+* Determine the most common violations per quantized rating (Poor, Adequate, Needs Improvement, Good)
+* Plot four histograms (one for each quantized rating) of these violations on the same plot.
+
+#### Expected output:
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>0</th>
+    </tr>
+    <tr>
+      <th>Scores</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="10" valign="top">Adequate</th>
+      <th>Unclean or degraded floors walls or ceilings</th>
+      <td>  8.720770</td>
+    </tr>
+    <tr>
+      <th>Unclean nonfood contact surfaces</th>
+      <td>  7.482806</td>
+    </tr>
+    <tr>
+      <th>Inadequate and inaccessible handwashing facilities</th>
+      <td>  7.180193</td>
+    </tr>
+    <tr>
+      <th>Moderate risk food holding temperature </th>
+      <td>  6.987620</td>
+    </tr>
+    <tr>
+      <th>Inadequately cleaned or sanitized food contact surfaces</th>
+      <td>  6.244842</td>
+    </tr>
+    <tr>
+      <th>Unapproved or unmaintained equipment or utensils</th>
+      <td>  6.217331</td>
+    </tr>
+    <tr>
+      <th>Wiping cloths not clean or properly stored or inadequate sanitizer</th>
+      <td>  6.052270</td>
+    </tr>
+    <tr>
+      <th>Improper food storage</th>
+      <td>  4.869326</td>
+    </tr>
+    <tr>
+      <th>Moderate risk vermin infestation</th>
+      <td>  4.401651</td>
+    </tr>
+    <tr>
+      <th>Foods not protected from contamination</th>
+      <td>  4.236589</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Good</th>
+      <th>Unclean or degraded floors walls or ceilings</th>
+      <td> 11.259932</td>
+    </tr>
+    <tr>
+      <th>Unclean nonfood contact surfaces</th>
+      <td>  8.059024</td>
+    </tr>
+    <tr>
+      <th>Wiping cloths not clean or properly stored or inadequate sanitizer</th>
+      <td>  7.219069</td>
+    </tr>
+    <tr>
+      <th>Inadequate and inaccessible handwashing facilities</th>
+      <td>  6.220204</td>
+    </tr>
+    <tr>
+      <th>Unapproved or unmaintained equipment or utensils</th>
+      <td>  6.197503</td>
+    </tr>
+    <tr>
+      <th>Moderate risk food holding temperature </th>
+      <td>  5.947787</td>
+    </tr>
+    <tr>
+      <th>Food safety certificate or food handler card not available</th>
+      <td>  5.380250</td>
+    </tr>
+    <tr>
+      <th>Improper food storage</th>
+      <td>  5.357548</td>
+    </tr>
+    <tr>
+      <th>Inadequately cleaned or sanitized food contact surfaces</th>
+      <td>  4.926220</td>
+    </tr>
+    <tr>
+      <th>Permit license or inspection report not posted</th>
+      <td>  3.564132</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Needs Improvement</th>
+      <th>Unclean or degraded floors walls or ceilings</th>
+      <td>  7.992315</td>
+    </tr>
+    <tr>
+      <th>Unclean nonfood contact surfaces</th>
+      <td>  6.878002</td>
+    </tr>
+    <tr>
+      <th>Inadequate and inaccessible handwashing facilities</th>
+      <td>  5.859750</td>
+    </tr>
+    <tr>
+      <th>Unapproved or unmaintained equipment or utensils</th>
+      <td>  5.840538</td>
+    </tr>
+    <tr>
+      <th>Foods not protected from contamination</th>
+      <td>  5.360231</td>
+    </tr>
+    <tr>
+      <th>Inadequately cleaned or sanitized food contact surfaces</th>
+      <td>  5.341018</td>
+    </tr>
+    <tr>
+      <th>High risk food holding temperature </th>
+      <td>  4.918348</td>
+    </tr>
+    <tr>
+      <th>Wiping cloths not clean or properly stored or inadequate sanitizer</th>
+      <td>  4.726225</td>
+    </tr>
+    <tr>
+      <th>Moderate risk food holding temperature </th>
+      <td>  4.630163</td>
+    </tr>
+    <tr>
+      <th>Improper food storage</th>
+      <td>  4.380403</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Poor</th>
+      <th>Unclean or degraded floors walls or ceilings</th>
+      <td>  6.932931</td>
+    </tr>
+    <tr>
+      <th>Unclean or unsanitary food contact surfaces</th>
+      <td>  6.631500</td>
+    </tr>
+    <tr>
+      <th>Unclean nonfood contact surfaces</th>
+      <td>  6.254710</td>
+    </tr>
+    <tr>
+      <th>High risk vermin infestation</th>
+      <td>  6.028636</td>
+    </tr>
+    <tr>
+      <th>Unapproved or unmaintained equipment or utensils</th>
+      <td>  5.802562</td>
+    </tr>
+    <tr>
+      <th>Foods not protected from contamination</th>
+      <td>  5.727204</td>
+    </tr>
+    <tr>
+      <th>Inadequate and inaccessible handwashing facilities</th>
+      <td>  5.651846</td>
+    </tr>
+    <tr>
+      <th>High risk food holding temperature </th>
+      <td>  5.275057</td>
+    </tr>
+    <tr>
+      <th>Inadequate food safety knowledge or lack of certified food safety manager</th>
+      <td>  5.048983</td>
+    </tr>
+    <tr>
+      <th>Improper food storage</th>
+      <td>  4.069329</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### ___Communicate Results___
 
