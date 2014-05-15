@@ -6,7 +6,7 @@ This sprint will be an introduction to EDA, the most important part of any data 
 
 ## Assignment: Happy Healthy Hungry -- San Francisco
 
-In this exercise we will walk through the data science process which we will formally cover in a later lecture.  We will be analyzing the inspections of San Francisco restaurants using publicly available [data](http://www.sfdph.org/dph/EH/Food/score/default.asp) from the Department of Public health.  We will learn to explore this data to map the cleanliness of the city, and get a better perspective on the relative meaning of these scores by looking at summary statistics of the data.  We will also use simple regression in addition to more advanced Machine Learning methods to attempt to predict the score of restaurants that have pending inspections. Once we understand how SF fares, we can compare its restaurants to those of [NYC](https://nycopendata.socrata.com/Health/Restaurant-Inspection-Results/4vkw-
+In this exercise we will walk through the data science process which we will formally cover in a later lecture.  We will be analyzing the inspections of San Francisco restaurants using publicly available [data](http://www.sfdph.org/dph/EH/Food/score/default.asp) from the Department of Public health.  We will learn to explore this data to map the cleanliness of the city, and get a better perspective on the relative meaning of these scores by looking at summary statistics of the data.  We can (later) also use simple regression in addition to more advanced Machine Learning methods to attempt to predict the score of restaurants that have pending inspections. Once we understand how SF fares, we can compare its restaurants to those of [NYC](https://nycopendata.socrata.com/Health/Restaurant-Inspection-Results/4vkw-
 7nck).
 
 ### Setup
@@ -41,13 +41,14 @@ ___quantifiable___
 * What do I want to ___learn___?
 * Alright to be ___exploratory___ (and the best analysis often are)
 
+Using the above points as a framework think concretely and quantitatively about what we want to answer.
+
 1. Formulate an appropriate problem statement given our case study
 
 ### ___Determine Goal___
 
 Now that we have a problem we hope to solve, let us begin to quantify our
-analysis.  Since our _Problem Statement_ is often qualitative and broad, we can
-ask further questions to better define what we hope to achieve.
+analysis.
 
 #### Some things to note about our goals and approach:
 
@@ -55,6 +56,9 @@ ask further questions to better define what we hope to achieve.
 * Brainstorm __metrics__ to visualize and/or calculate.
 * Ask __questions__ that have (or can have) a definitive answer.
 * Be careful what you wish for, be aware of possible __correlations__, and take caution with how you [measure](http://en.wikipedia.org/wiki/Observer-expectancy_effect) it.
+
+Since our _Problem Statement_ is often qualitative and broad, we can
+ask further questions to better define what we hope to achieve.
 
 1. Derive three additional questions based on the problem defined
 above.
@@ -362,8 +366,7 @@ score it will receive?
 1. For each question of your goals, propose a solution on how to determine the answer (i.e. I need to look at the average inspection score of SF vs. other cities).
 
 __This is simply a one or two line statement to drive you forward in your
-analyses.  Refer to the lecure notes for an example of how we formulated
-solutions in the context of Wolfram's analysis.__
+analyses.__
 
 #### Some things to note about formulating solutions:
 
@@ -455,6 +458,8 @@ arrived at:
 
 * Answers our original question to an acceptable level of confidence.
 * Has allowed us to achieve our goals?
+
+Using the above statistics/transforms of our data answer the following:
 
 1. Create a histogram of these discretized scores ('Poor', 'Needs Improvement', 'Adequate', 'Good')
   * Plot the descriptive scores on a histogram with 4 bins -- ['Poor', 'Needs Improvement', 'Adequate', 'Good']
@@ -686,6 +691,10 @@ ___I will leave this recursive process of iteration (out of the scope of this ex
   </tbody>
 </table>
 </div>
+
+#### Histogram
+
+![multi-hist](hist2.png)
 
 ### ___Communicate Results___
 
