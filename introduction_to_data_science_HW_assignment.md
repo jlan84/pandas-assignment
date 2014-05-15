@@ -424,6 +424,7 @@ __recall that in the Score Legend, each numeric score corresponds to a more qual
 86               90               "Adequate"
 
 91               100              "Good"
+```
 
 1. Quantize the raw numeric inspection scores into the more qualitative scores ('Poor', 'Needs Imporvement', 'Adequate', 'Good') for the inspections.
   * Discretize the current numeric scores into these 'categorical' descriptions.
@@ -524,6 +525,7 @@ and put your code on [Github](https://github.com/) (or a similar service)
 
 *Relevant resources:*
 
+* [CartoDB](http://cartodb.com/) (actually my favorite tool for like most anything)
 * [matplotlib: Basemap](http://matplotlib.org/basemap/users/examples.html)
 * [folium: Python data. Meet Leaflet maps](https://github.com/wrobstory/folium)
 * [Polymaps Javascript library](http://polymaps.org/)
