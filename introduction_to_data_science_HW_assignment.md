@@ -1,160 +1,36 @@
+# Overview
 
-# Introduction to Data Science
+This sprint will be an introduction to EDA, the most important part of any data analysis.  You cannot (should not) conduct any analysis without first understanding your data.  We will be using Pandas and IPython to explore our data.  This is not only useful to learn about the structure of your data but to also verify that it is correct, find erroneous/missing values, and detect outliers among other things.
 
-Welcome to [Zipfian Academy's](http://zipfianacademy.com) Introduction to Data
-Science course. Thank you for attending, we hope you enjoyed the lecture (we
-sure had fun presenting).  This exercise will give you hands-on experience with
-the concepts covered, and will help solidify your understanding of the process
-of data science.
+![EDA](eda.jpg)
 
-### Getting Help
+## Assignment: Happy Healthy Hungry -- San Francisco
 
-If you have any questions throughout this exercise or need help at all, please
-ask on [Piazza](https://piazza.com/class#summer2013/101) and join the
-conversation.  Chances are that if you have a question or get stuck, someone
-else is in the same situation.  If you post to Piazza we (the instructors) can
-answer the question for everyone, and other students can provide insights as
-well.
-
-As always, feel free to email us about anything at all (questions, issues,
-concerns, feedback) at <a
-href="mailto:class@zipfianacademy.com">class@zipfianacademy.com</a>.  We would
-love to hear how you liked the class, whether the content was technical enough
-(or too technical), or any other topics you wish were covered.
-
-### Next Steps
-
-We hope you have fun with this exercise!  If you want to learn more or dive
-deeper into any of these subjects, we are always happy to discuss (and can talk
-for days about these subjects).  We will be continuing the data journey with the
-subsequent classes in the [series](https://team-zipfian-
-statistics.eventbrite.com/). We encourage you to sign up for any class(es)
-covering topics which you would like to dive deeper into and continue your
-learning.  And if you just can't get enough of this stuff (and want a completely
-immersive environment), you can
-[apply](http://zipfiancollective.wufoo.com/forms/z7x3p3/) for our intensive data
-science bootcamp starting September 16th.
-
-
-
-
-
-### Learning Python
-
-This assignment assumes a basic familiarity with Python and is intended to teach
-you how to leverage it for data science.  If you do not feel comfortable enough
-with Python (and programming in general) I recommend these (freely available)
-resources:
-
-* [Think Python](http://www.greenteapress.com/thinkpython/thinkpython.pdf)
-* [MIT Open Courseware: A Gentle Introduction to Programming Using
-Python](http://ocw.mit.edu/courses/electrical-engineering-and-computer-
-science/6-189-a-gentle-introduction-to-programming-using-python-january-
-iap-2008/index.htm)
-* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
-* [Python Koans](https://github.com/gregmalcolm/python_koans/wiki)
-
-## Setup and Environment
-
-This exercise is written in an [IPython](http://ipython.org/)
-[notebook](http://ipython.org/notebook.html) and uses many of wonderful
-libraries from the scientific Python
-[community](http://strata.oreilly.com/2013/03/python-data-tools-just-keep-
-getting-better.html).  While you do not need IPython locally to complete the
-exercise (there are PDF and .ipynb versions of these instructions), I recommend
-setting it up on your computer if you plan to continue learning and playing with
-data.  IPython [notebooks](http://ipython.org/ipython-
-doc/stable/interactive/htmlnotebook.html) not only provide an interface to
-interactively run (and debug) code in a web browser, but also to document your
-file as you go along.  Below are the steps to setup a scientific Python
-environment on your computer to complete this (and all future class')
-assignment.  If you have tips or suggestions to make this process easier, please
-reach out either on Piazza or via email.
-
-### Version control and Environment Isolation
-* [Git](http://git-scm.com/): Distributed Version Control to keep track of
-changes and updates to files/data.
-* [virualenv](http://www.virtualenv.org/en/latest/): Python environment
-isolation to help manage dependencies with packages and versions.
-* [pythonbrew](https://github.com/utahta/pythonbrew): Manage and install
-multiple versions of Python.  Can be handy if you want to experiment with Python
-3.x.
-
-### Scientific Python packages
-
-* [Enthought Python Distribution](https://www.enthought.com/products/epd/free/):
-A freely available packaged environment for scientific Python.
-* [Scipy Superpack](http://fonnesbeck.github.io/ScipySuperpack/): Only for Mac
-OSX, but a one line shell script that installs all the fundamental scientific
-computing packages.
-* [pandas](http://pandas.pydata.org/): Data analysis and statistical library
-providing functionality in Python similar to [R](http://www.r-project.org/).
-
-<em>if you are on OSX, you may need to install [Xcode](http://developer.apple.co
-m/library/ios/#documentation/DeveloperTools/Conceptual/WhatsNewXcode/Articles/xc
-ode_4_3.html) (with command line utilities) or install [gcc](https://medium.com
-/kr-projects/6e54e8c50dc8) directly</em>
-
-__[Tutorial](https://sites.google.com/site/pythonbootcamp/preparation/software)
-walking you through the installation of these tools, with
-[tests](https://sites.google.com/site/pythonbootcamp/preparation/testing-that-
-it-all-works) to make sure it all works.__
-
-## Exercise: Happy Healthy Hungry -- San Francisco
-
-Now that your environment is all setup up... the fun begins!  In this exercise
-we will walk through the data science [process](http://zipfianacademy.com/data
-/data-science-process.png) covered in lecture.  We will be analyzing the
-inspections of San Francisco restaurants using publicly available
-[data](http://www.sfdph.org/dph/EH/Food/score/default.asp) from the Department
-of Public health.  We will learn to explore this data to map the cleanliness of
-the city, and get a better perspective on the relative meaning of these scores
-by looking at summary statistics of the data.  We will also use simple
-regression in addition to more advanced Machine Learning methods to attempt to
-predict the score of restaurants that have pending inspections. Once we
-understand how SF fares, we will compare its restaurants to those of
-[NYC](https://nycopendata.socrata.com/Health/Restaurant-Inspection-Results/4vkw-
+In this exercise we will walk through the data science process which we will formally cover in a later lecture.  We will be analyzing the inspections of San Francisco restaurants using publicly available [data](http://www.sfdph.org/dph/EH/Food/score/default.asp) from the Department of Public health.  We will learn to explore this data to map the cleanliness of the city, and get a better perspective on the relative meaning of these scores by looking at summary statistics of the data.  We will also use simple regression in addition to more advanced Machine Learning methods to attempt to predict the score of restaurants that have pending inspections. Once we understand how SF fares, we can compare its restaurants to those of [NYC](https://nycopendata.socrata.com/Health/Restaurant-Inspection-Results/4vkw-
 7nck).
 
-This case study will be explored throughout the class [series](http://team-
-zipfian-statistics.eventbrite.com/). Each subsequent class will go into much
-more depth on each specific topic. This assignment wil provide an introduction
-to the problem, and focus on the data science
-[process](http://zipfianacademy.com/data/data-science-workflow/animate.gif)
-itself more than individual subjects.
+### Setup
 
+For this exercise we will get exposed to [IPython notebook](http://ipython.org/notebook.html) and learn how to conduct exploratory data analysis with Python.  While you will not be required to use the IPython notebook, it is very well suited to this type of analysis due to its inlining of images and documentation (markdown).
 
-    # Import pylab to provide scientific Python libraries (NumPy, SciPy, Matplotlib)
-    import pylab
-    
-    # import the Image display module
-    from IPython.display import Image
-    
-    # inline allows us to embed matplotlib figures directly into the IPython notebook
-    %pylab inline
+First let us just setup our IPython notebook. 
+```python
+# Import pylab to provide scientific Python libraries (NumPy, SciPy, Matplotlib)
+import pylab
 
-    
-    Welcome to pylab, a matplotlib-based Python environment [backend: module://IPython.kernel.zmq.pylab.backend_inline].
-    For more information, type 'help(pylab)'.
+# import the Image display module
+from IPython.display import Image
 
-
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/animate.gif', width=700)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/animate.gif" width="700"/>
-
-
+# inline allows us to embed matplotlib figures directly into the IPython notebook
+%pylab inline
+```
 
 ## ___Problem___
 
-The first step of the __Process__ is to define the problem we want to address.
+The first step of the Data Science __Process__ is to define the problem we want to address.
+
 To do so let us review what we have set out to accomplish and begin exploring
 questions we want answered.
-
-
 
 #### Important points to keep in mind when defining our problem:
 
@@ -164,22 +40,8 @@ ___quantifiable___
 * What do I want to ___learn___?
 * Alright to be ___exploratory___ (and the best analysis often are)
 
+1. Formulate an appropriate problem statement given our case study
 
-### Exercise 1: Formulate an appropriate problem statement given our case study
-
-> #### * ANSWER HERE *
-
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/goal.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/goal.png" width="500"/>
-
-
-
-<a id="goals"></a>
 ## ___Determine Goal___
 
 Now that we have a problem we hope to solve, let us begin to quantify our
@@ -195,34 +57,22 @@ ask further questions to better define what we hope to achieve.
 caution with how you [measure](http://en.wikipedia.org/wiki/Observer-
 expectancy_effect) it.
 
-### Exercise 2: Derive three additional questions based on the probelm defined
-above (exercise 1)
-
-> #### * ANSWER HERE *
-
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/explore.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/explore.png" width="500"/>
-
-
+1. Derive three additional questions based on the problem defined
+above.
 
 ## ___Explore Data___
 
 #### To recap where we are in our analysis:
 
-* We have determined what we want to learn -- ___Exercise 1___
-* We explored quantifiable metrics to collect -- ___Exercise 2___
+* We have determined what we want to learn -- ___Question 1___
+* We explored quantifiable metrics to collect -- ___Question 2___
 
 The ___Explore___ stage of the analysis is where we will most likely spend most
 of our [time](http://strataconf.com/stratany2012/public/schedule/detail/27495).
 Now comes the fun part (in my opinion)!  At this stage we will use a variety of
 tools (the documentation of each linked to inline) to figure out where and how
 to obtain data, what it looks like once we have it, and how to use it to answer
-our questions to achieve our <a href="#goals">goals</a>.
+our questions to achieve our goals</a>.
 
 ### Acquire
 
@@ -634,11 +484,16 @@ docs/stable/basics.html#descriptive-statistics)
     # recall that in the Score Legend, each numeric score corresponds to a more qualitative description
     !head -n 5 SFBusinesses/ScoreLegend.csv | column -t -s ','
 
-    "Minimum_Score"  "Maximum_Score"  "Description"
-    0                70               "Poor"
-    71               85               "Needs Improvement"
-    86               90               "Adequate"
-    91               100              "Good"
+    "Minimum_Score"  "Maximum_Score"  "Description"
+
+    0                70               "Poor"
+
+    71               85               "Needs Improvement"
+
+    86               90               "Adequate"
+
+    91               100              "Good"
+
 
 
 ### Exercise 5.1: Quantize the raw numeric inspection scores into the more
