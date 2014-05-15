@@ -702,16 +702,16 @@ method](https://en.wikipedia.org/wiki/Scientific_method), you want your analyses
 to be readily reproducible.
 
 1. Create a unique visualization the you feel effective communicates your analyses.  Some suggestions:
-
-* Geographically plot inspection scores on a map of the city.
-* Create plots of how much each individual inspection compares to the
+  * Geographically plot inspection scores on a map of the city.
+  * Create plots of how much each individual inspection compares to the
 mean/average of SF restuarants.
-* Overlay common distributions on the histogram (or scatterplot) of restaurant
+  * Overlay common distributions on the histogram (or scatterplot) of restaurant
 inspection scores for comparison.
-* Create a heatmap of scores identifying any possible hotspots for 'dirty'
+  * Create a heatmap of scores identifying any possible hotspots for 'dirty'
 restuarants.
 
 #### Extra Extra Credit:
+
 * Make your map interactive using Javascript.
 * Use an API ([Yelp](http://www.yelp.com/developers/documentation), [Google
 Places](https://developers.google.com/places/documentation/),
