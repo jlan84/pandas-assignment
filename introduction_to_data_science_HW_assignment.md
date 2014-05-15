@@ -14,6 +14,7 @@ In this exercise we will walk through the data science process which we will for
 For this exercise we will get exposed to [IPython notebook](http://ipython.org/notebook.html) and learn how to conduct exploratory data analysis with Python.  While you will not be required to use the IPython notebook, it is very well suited to this type of analysis due to its inlining of images and documentation (markdown).
 
 First let us just setup our IPython notebook. 
+
 ```python
 # Import pylab to provide scientific Python libraries (NumPy, SciPy, Matplotlib)
 import pylab
@@ -25,7 +26,7 @@ from IPython.display import Image
 %pylab inline
 ```
 
-## ___Problem___
+### ___Problem___
 
 The first step of the Data Science __Process__ is to define the problem we want to address.
 
@@ -42,7 +43,7 @@ ___quantifiable___
 
 1. Formulate an appropriate problem statement given our case study
 
-## ___Determine Goal___
+### ___Determine Goal___
 
 Now that we have a problem we hope to solve, let us begin to quantify our
 analysis.  Since our _Problem Statement_ is often qualitative and broad, we can
@@ -60,7 +61,7 @@ expectancy_effect) it.
 1. Derive three additional questions based on the problem defined
 above.
 
-## ___Explore Data___
+### ___Explore Data___
 
 #### To recap where we are in our analysis:
 
@@ -74,7 +75,7 @@ tools (the documentation of each linked to inline) to figure out where and how
 to obtain data, what it looks like once we have it, and how to use it to answer
 our questions to achieve our goals</a>.
 
-### Acquire
+#### Acquire
 
 Luckily, San Francisco has much of its public government data freely
 [accessible](https://data.sfgov.org/) online.   There are also great
@@ -86,26 +87,19 @@ collaborating with [non-profits](http://codeforamerica.org/) and
 much more transparency, leading ultimately to a more engaged citizenry.
 
 The relevant [data](http://www.sfdph.org/dph/EH/Food/score/default.asp) has been
-downloaded for your convenience and can be found on Piazza in the Resources
-[section](https://piazza.com/zipfian_academy/summer2013/101/resources).
+downloaded for your convenience and can be found on in this repository (`/data`).
 
-### Examine
-
-_If you are working with this IPython notebook, download the data files into the
-same directory which you ran the_ `ipython notebook`  _command_
+#### Examine
 
 Now that we have found the relevant data we can begin to peer inside to
 understand what we are working with.  I recommend starting with an iterative
 approach, using the quickest/easiest tools first and slowly build to more
 complicated analyes.  UNIX provides us with many powerful tools and can carry us
 quite far by itself. In our case the dataset came with
-[documentation](https://s3.amazonaws.com/piazza-resources/hgtp0qhpaps1d5/hhfjlqv
-3gii2l8/File_Specifications.pdf?AWSAccessKeyId=AKIAJKOQYKAYOBKKVTKQ&Expires=1370
-258028&Signature=ZsHGKBMNwbdv9Ptio3b6GYrhB08%3D) of its contents, but it still
+[documentation](data/File_Specifications.pdf) of its contents, but it still
 is essential to look at the raw data and compare it to the docs.
 
-### Exercise 3.1: Display the first 5 lines of each of the data files (CSV files
-in SFBusinesses directory).
+1. Display the first 5 lines of each of the data files (CSV files in SFBusinesses directory) using UNIX utilities.
 
 #### Extra Credit:
 * Display the last 5 lines of each file
@@ -113,8 +107,6 @@ in SFBusinesses directory).
 
 *Relevant resources:*
 
-* [IPython tutorial](http://ipython.org/ipython-
-doc/rel-0.13.1/interactive/tutorial.html)
 * [IPthon: System Shell Access](http://ipython.org/ipython-
 doc/rel-0.13.1/interactive/reference.html#system-shell-access)
 * [head (UNIX)](http://en.wikipedia.org/wiki/Head_(Unix))
@@ -126,13 +118,13 @@ ___There are two different data directories, each of which has similar files.
 Let's try to figure out the difference between the two, since the documentation
 on the data does not mention anything.___
 
-### Exercise 3.2: Compare the files in SFBusinesses with
-SFFoodProgram_Complete_Data. For the corresponding files:
-* Display the first 5 lines of each file.
-* Compare the column names, column contents, and number of columns.
-* Compare the number of lines (records), word counts, and file size.
+1. Compare the files in SFBusinesses with SFFoodProgram_Complete_Data. For the corresponding files:
+  * Display the first 5 lines of each file.
+  * Compare the column names, column contents, and number of columns.
+  * Compare the number of lines (records), word counts, and file size.
 
 #### Extra Credit:
+
 * Use [AWK](http://en.wikipedia.org/wiki/AWK) and Python to automate this for
 all the files in the directory (e.g. pass in two directories and spit out the
 relevant metrics)
@@ -147,7 +139,7 @@ on/raw/master/examples/notebooks/Cell%20Magics.ipynb)
 * [AWK](http://en.wikipedia.org/wiki/AWK)
 
 
-### Prepare
+#### Prepare
 
 This is typically what people refer to as data 'munging' (or 'wrangling') and
 often is the most tedious process when working with messy data. Due to
@@ -160,12 +152,9 @@ can hopefully avoid a lot of pain later in the analysis process.
 The preparation process of our analysis is not as long and cumbersome as it
 typically might be due to the high quality of the raw data.  Because of this, I
 will spare you much of the tedium of this step so we can focus on the more
-interesting aspects of the analysis.  If you want to see (and experience) the
-pain (all you masochists out there), we will get much deeper into data
-acquisition and scrubbing techniques in our data wrangling [class](http://team-
-zipfian-data-wrangling.eventbrite.com/) of this series.
+interesting aspects of the analysis.
 
-### Transform
+#### Transform
 
 Now that we know the structure of our data, we can start to begin examining it
 statistically to get a macrosopic look at its distribution.  This part of our
@@ -179,34 +168,12 @@ libraries in much more [depth](http://scipy-lectures.github.io/) than I will
 here.  I highly recommend taking a look at these if this analysis interests you
 even in the least bit.
 
+> To perform some interesting statistical analyses, we first need to "join" our CSV files in order to associate businesses with their inspection scores. This data currently resides in SFBusinesses/businesses.csv and SFBusinesses/inspections.csv
 
-    '''
-    To perform some interesting statistical analyses, we first need to "join" our CSV files in order to associate businesses 
-    with their inspection scores. This data currently resides in SFBusinesses/businesses.csv and SFBusinesses/inspections.csv
-    '''
-    
-    # import pandas library which provides an R like environment for python.
-    # if you do not have it installed: sudo easy_install pandas.
-    from pandas import Series, DataFrame
-    
-    import pandas as pd
-    
-    # store relevant file paths in variables since we may use them frequently
-    root_dir = 'SFBusinesses/'
-    businesses = root_dir + 'businesses.csv'
-    inspections = root_dir + 'inspections.csv'
-    
-    
-    # load each file into a Pandas DataFrame, pandas automatically converts the first line into a header for the columns
-    
-    df_business = pd.read_csv(businesses)
-    df_inspection = pd.read_csv(inspections)
-    
-    # inspect the first 10 rows of the DataFrame
-    df_inspection.head(10)
+1. Load both the business data and inspection data into a dataframe.
+1. Inspect the first 10 rows of each of these data frames
 
-
-
+#### Expected Output:
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
@@ -294,12 +261,9 @@ even in the least bit.
 </table>
 </div>
 
-
-
-### Exercise 3.3: Join the businesses.csv and inspections.csv on the business_id
-column.
-* Use pandas DataFrame functions to merge df_businesses and df_inspection.
-* Inspect the resulting table.
+1. Join the businesses.csv and inspections.csv on the business_id column.
+  * Use pandas DataFrame functions to merge df_businesses and df_inspection.
+  * Inspect the resulting table.
 
 #### Extra Credit:
 * Print out the column names of df_businesses, df_inspection, and the resulting
@@ -320,7 +284,6 @@ docs/stable/indexing.html)
 * [Python for Data Analysis: O'Reilly
 book](http://my.safaribooksonline.com/book/programming/python/9781449323592)
 
-
 __Now that we have our joined data, we can start exploring it__
 
 To analyze our businesses we need to perform some basic aggregations and
@@ -328,10 +291,10 @@ transformations.  Currently each business has multiple rows in the join table
 (all with the same business_id).  Let us group these records by business and
 only keep the most recent inspection.
 
-### Exercise 3.4: Transform the table to only contain each businesses most
+1. Transform the table to only contain each businesses most
 recent inspection
-* Group the resulting join table by the 'business_id' column.
-* Filter the table such that only the most recent score is listed.
+  * Group the resulting join table by the 'business_id' column.
+  * Filter the table such that only the most recent score is listed.
 
 #### Extra Credit:
 * Use [pandas function application](http://pandas.pydata.org/pandas-
@@ -352,16 +315,6 @@ ndas.DataFrame.sort_index.html#pandas.DataFrame.sort_index)
 * [pandas `head`](http://pandas.pydata.org/pandas-
 docs/stable/generated/pandas.DataFrame.head.html#pandas.DataFrame.head)
 
-
-    Image(url='http://inundata.org/R_talks/meetup/images/splitapply.png', width=500)
-
-
-
-
-<img src="http://inundata.org/R_talks/meetup/images/splitapply.png" width="500"/>
-
-
-
 ### Split-Apply-Combine
 A visual representation of how group-by, aggregate, and apply semantics work
 
@@ -369,10 +322,8 @@ __We can bin the restaurants by scores to understand the distribution of
 inspections better.  Here we create a histogram to understand the distribution
 of scores better__
 
-### Exercise 3.5: Create a histogram of the most recent inspection scores of all
+1. Create a histogram of the most recent inspection scores of all
 the restaurants
-* Create a [matplotlib](http://matplotlib.org/) figure of a histogram with 100
-bins.
 
 #### Extra Credit:
 * Scale the x-axis (inspection scores) to range from 40 to 100, incrementing by
@@ -392,17 +343,7 @@ docs/stable/visualization.html#histograms)
 labels](http://stackoverflow.com/questions/12945971/pandas-timeseries-plot-
 setting-x-axis-major-and-minor-ticks-and-labels)
 
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/solutions.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/solutions.png" width="500"/>
-
-
-
-## ___Propose Solutions___
+### ___Iterate___
 
 Since we have explored our data and have a better idea of its nature, we can
 begin to devise a plan to answer our questions. This is usually the most
@@ -418,13 +359,11 @@ SF?
 > If a restaurant has not yet been inspected, can we approximate/predict what
 score it will receive?
 
-### Exercise 4.0: For each question of your <a href="#goals">goals</a>, propose
-a solution.
+1. For each question of your goals, propose a solution on how to determine the answer (i.e. I need to look at the average inspection score of SF vs. other cities).
+
 __This is simply a one or two line statement to drive you forward in your
 analyses.  Refer to the lecure notes for an example of how we formulated
 solutions in the context of Wolfram's analysis.__
-
-> #### * ANSWER HERE *
 
 #### Some things to note about formulating solutions:
 
@@ -433,17 +372,7 @@ solutions in the context of Wolfram's analysis.__
 * The simplest solution is often best (and the one you should try first)
 * Quantize the metrics needed for your analysis
 
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/metrics.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/metrics.png" width="500"/>
-
-
-
-## ___Collect Metrics___
+### ___Collect Metrics/Statistics___
 
 This is the step where derivative values are often calculated, including
 __summary statistics__, __transformations__ on the data, and __correlations__.
@@ -457,8 +386,9 @@ inspected yet.
 ___The purpose of this part of the process is to calculate the information you
 need to begin evaluating and testing you solutions and hypotheses.___
 
-### Exercise 5.0: Compute descriptive statistics of the most recent restaurant
+1. Compute descriptive statistics of the most recent restaurant
 inspection scores.
+
 __Calculate:__
 
 * total count of inspections
@@ -469,7 +399,6 @@ __Calculate:__
 
 #### Extra Credit:
 * Do not use pandas `describe()` convenience method.
-* Add an appropriate title and axis labels to the graph.
 
 *Relevant resources:*
 
@@ -481,28 +410,24 @@ docs/stable/basics.html#descriptive-statistics)
 #summarizing-data-describe)
 
 
-    # recall that in the Score Legend, each numeric score corresponds to a more qualitative description
-    !head -n 5 SFBusinesses/ScoreLegend.csv | column -t -s ','
+__recall that in the Score Legend, each numeric score corresponds to a more qualitative description__
 
-    "Minimum_Score"  "Maximum_Score"  "Description"
+```bash
+!head -n 5 SFBusinesses/ScoreLegend.csv | column -t -s ','
 
-    0                70               "Poor"
+"Minimum_Score"  "Maximum_Score"  "Description"
 
-    71               85               "Needs Improvement"
+0                70               "Poor"
 
-    86               90               "Adequate"
+71               85               "Needs Improvement"
 
-    91               100              "Good"
+86               90               "Adequate"
 
+91               100              "Good"
 
-
-### Exercise 5.1: Quantize the raw numeric inspection scores into the more
-qualitative scores ('Poor', 'Needs Imporvement', 'Adequate', 'Good') for the
-inspections.
-
-* Discretize the current numeric scores into these 'categorical' descriptions.
-* Print out the ['name', 'date', 'Score', 'type'] columns of this new table for
-the first 15 records (rows).
+1. Quantize the raw numeric inspection scores into the more qualitative scores ('Poor', 'Needs Imporvement', 'Adequate', 'Good') for the inspections.
+  * Discretize the current numeric scores into these 'categorical' descriptions.
+  * Print out the ['name', 'date', 'Score', 'type'] columns of this new table for the first 15 records (rows).
 
 #### Extra Credit:
 * Create a new DataFrame of the original records, but with the 'Score' numeric
@@ -521,17 +446,7 @@ __By quantizing the scores of the restaurant inspections, we can get a better
 qualitative insight into the ratings.  Let us compare this new distribution of
 quantized scores to the raw numeric values.__
 
-
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/evaluate.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/evaluate.png" width="500"/>
-
-
-
-## ___Evaluate___
+### ___Evaluate___
 
 With the metrics we need properly calculated, it is time to draw some
 conclusions from our analyses.  We need to evaluate whether the result we have
@@ -540,17 +455,12 @@ arrived at:
 * Answers our original question to an acceptable level of confidence.
 * Has allowed us to achieve our goals?
 
-### Exercise 6.0: Create a histogram of these discretized scores ('Poor', 'Needs
-Imporvement', 'Adequate', 'Good')
-
-* Plot the descriptive scores on a histogram with 4 bins -- ['Poor', 'Needs
-Imporvement', 'Adequate', 'Good']
-* Print out the ['name', 'date', 'Score', 'type'] columns of this new table for
-the first 15 records (rows).
+1. Create a histogram of these discretized scores ('Poor', 'Needs Improvement', 'Adequate', 'Good')
+  * Plot the descriptive scores on a histogram with 4 bins -- ['Poor', 'Needs Improvement', 'Adequate', 'Good']
+  * Print out the ['name', 'date', 'Score', 'type'] columns of this new table for the first 15 records (rows).
 
 #### Extra Credit:
-* Create a figure with 2 [subplots]() to display the raw (numeric) scores
-histogram next to the quantized (descriptions) histogram.
+* Create a figure with 2 [subplots](http://matplotlib.org/1.3.1/users/pyplot_tutorial.html#working-with-multiple-figures-and-axes) to display the raw (numeric) scores histogram next to the quantized (descriptions) histogram.
 * Decorate both of these subplot each with its own unique title, axis labels,
 and x-axis ticks/scale.
 * Arrange data such that 'Poor' is plotted as the left-most bar and 'Good' the
@@ -567,7 +477,7 @@ docs/stable/visualization.html#bar-plots)
 * [matplotlib `subplot()`](http://matplotlib.org/api/pyplot_api.html#matplotlib.
 pyplot.subplot)
 
-### Exercise 7: Iterate!
+### __More iteration!__
 
 If we are not satisfied with our evaluation, we need to iterate on our approach:
 
@@ -575,22 +485,11 @@ If we are not satisfied with our evaluation, we need to iterate on our approach:
 * Do I need to try a different proposed solution?
 * Do I need to calculate different metrics?
 
-___I will leave the process of iteration (out of the scope of this exercise) as
-an additional task for the student.  With such analyses as these you can
-endlessly refine your solution and find new questions to ask... and I whole
-heartedly encourage all of you to do so!___
+___I will leave this recursive process of iteration (out of the scope of this exercise) as an additional task for the student.  With such analyses as these you can endlessly refine your solution and find new questions to ask... and I whole heartedly encourage all of you to do so!___
 
+## Extra Credit
 
-    Image(url='http://zipfianacademy.com/data/data-science-workflow/communicate.png', width=500)
-
-
-
-
-<img src="http://zipfianacademy.com/data/data-science-workflow/communicate.png" width="500"/>
-
-
-
-## ___Communicate Results___
+### ___Communicate Results___
 
 __Once you are satisfied with your analysis and feel that you have accomplished
 your goals you set out to achieve, it is time to share your work with the
@@ -604,8 +503,7 @@ keeping in line with the [scientific
 method](https://en.wikipedia.org/wiki/Scientific_method), you want your analyses
 to be readily reproducible.
 
-### Exercise 8: Create a unique visualization the you feel effective
-communicates your analyses.  Some suggestions:
+1. Create a unique visualization the you feel effective communicates your analyses.  Some suggestions:
 
 * Geographically plot inspection scores on a map of the city.
 * Create plots of how much each individual inspection compares to the
@@ -615,7 +513,7 @@ inspection scores for comparison.
 * Create a heatmap of scores identifying any possible hotspots for 'dirty'
 restuarants.
 
-#### Extra Credit:
+#### Extra Extra Credit:
 * Make your map interactive using Javascript.
 * Use an API ([Yelp](http://www.yelp.com/developers/documentation), [Google
 Places](https://developers.google.com/places/documentation/),
