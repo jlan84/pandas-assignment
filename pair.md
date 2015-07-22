@@ -1,25 +1,29 @@
-# Exploring real health care data using pandas.
+# Exploring real Health Care data using Pandas  
 
 You are a rogue data scientist living in the hood of South Brooklyn. The streets are bad enough, but what is worse is the health conditions of the projects.
-Your neighbor, who introduced himself as Bling, has been missing for the last week. Upon his return, he tells you he's been in the hospital for "Viral Meningitis".
-That's when his brother, Bundles, begins showing symptoms of "Viral Meningitis". Bling asks you to help him find the best hospital to go to for the least amount of cash money.
+Your neighbor, who introduced himself as Bling, has been missing for the last week. Upon his return, he tells you he's been in the hospital for *Viral Meningitis*.
+That's when his brother, Bundles, begins showing symptoms of *Viral Meningitis*. Bling asks you to help him find the best hospital to go to for the least amount of cash money.
 
 
-### The first goal of this sprint is to find which hospital charges the most for treating "Viral Meningitis".
+### The first goal of this sprint is to find which hospital charges the most for treating *Viral Meningitis*.
 We will be using the data file `hospital-costs.csv` located in the data folder.
 
 Here is how to start off.  
 
-1.  `df = pd.read_csv("../data/hospital-costs.csv")`  
-2.  Now, look at and familiarize yourself with the dataset you will be working with.  
-3.  Keep the official pandas documentation handy and apply generously as needed. http://pandas.pydata.org/pandas-docs/stable/
+```python
+import pandas as pd
+
+df = pd.read_csv("../data/hospital-costs.csv")
+````
+1.  Now, look at and familiarize yourself with the dataset you will be working with.  
+2.  Keep the official pandas documentation handy and apply generously as needed. http://pandas.pydata.org/pandas-docs/stable/
 <br>
 
 The amount in the charge/costs columns is the price per discharge. Most hospitals treat many people with the same illness.  The amount they treat is the number in the "Discharges" column.
 <br>
 ### It is your job to calculate all the cost totals.
-1. Create a new column called something easy to remember that is the "Discharges" * "Mean Charge".  
-2. Do the same for the "Mean Cost".
+1. Create a new column "Total Charges" using "Discharges" and "Mean Charge".  
+2. Do the same for the "Total Costs" using "Mean Cost".
 2. With theses two new "Total Charges" and "Total Costs" columns, calculate the markup rate.
 3. Tell me which procedure has the highest markup, and which one has the lowest markup
 
@@ -47,7 +51,7 @@ Use a groupby method on the Description column and sum the Discharges.
 Now we want to see which hospital has the most money coming.
 To keep this from getting messy, lets create a new DataFrame with only the columns we care about.  
 *  Create a new DataFrame named "net" that is only the Facility Name, Total Charge, Total Cost from our original DataFrame  
-*  Find the total amount much each hospital spent, and how much they charged. (Group your data by Facility names, and sum all the total costs and total charges)
+*  Find the total amount each hospital spent, and how much they charged. (Group your data by Facility names, and sum all the total costs and total charges)
 *  Now find the net income for every hospital. Tell me the most profitable and the least profitable ones and how much are they making?
 
 
@@ -61,13 +65,16 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 <br>
 
 
-# Now, lets focus in on "Viral Meningitis"
-1. Create a new dataframe that only contains the data correspoindng to "Viral Meningitis"
-1.  ``` newdf = df[df["Illness"] == "Viral Meningitis"]]```
-2. Now, with our newdf, only keep the data columns we care about which are: `["Facility Name", "APR DRG Description","APR Severity of Illness Description","Discharges", "Mean Charge", "Median Charge", "Mean Cost"]`
+# Now, lets focus in on *Viral Meningitis*
+1. Create a new dataframe that only contains the data corresponding to *Viral Meningitis*  
+	```python
+	newdf = df[df["Illness"] == "Viral Meningitis"]]
+	```
+2. Now, with our new dataframe, only keep the data columns we care about which are:  
+`["Facility Name", "APR DRG Description","APR Severity of Illness Description","Discharges", "Mean Charge", "Median Charge", "Mean Cost"]`
 <br>
 
-3. Our newdf should look somewhat like this:
+3. Our new dataframe should look somewhat like this:
 
 |Facility Name|APR DRG Description|APR Severity of Illness Description|Discharges|Mean Charge|Median Charge|Mean Cost|
 |----|----|----|----|----|----|----|
@@ -102,12 +109,12 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 
 <br>
 
-# Data can be tricky.  
+# Data can be tricky   
 1. Which illness has the most discharges?  It seems like an easy query, but data can be tricky.
 
 Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how sever that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description".  This is annoying because it just is.
-**To account for this you have to do a *double group by*... **
-*   Group the APR DRG Description with the of severity for each Illness.
+**To account for this you have to do a double group by...**  
+*  Group the APR DRG Description with the of severity for each Illness.  
 *  What is the most expensive type of illness?  
 
 ---
@@ -128,8 +135,8 @@ Notice the "APR DRG Description" should be unique for each hospital, however, ho
 ---
 
 # Extra Credit:
-Open ended question:
-1. Gain insights from data.
-2. Use Pandas Visualization tool (see [link](https://github.com/zipfian/dsi/tree/denver/graphing-basics) ) to plot insight
-3. Create heat map.
+Open ended question:  
+1. Gain insights from data.  
+2. Use Pandas Visualization tool (see [link](https://github.com/zipfian/dsi/tree/denver/graphing-basics) ) to plot insight  
+3. Create heat map.  
 ### This is the end of the afternoon exercise.  If you have finished up early, find a data set you have always wanted to play with, and play with it.  
