@@ -13,7 +13,7 @@ Here is how to start off.
 ```python
 import pandas as pd
 
-df = pd.read_csv("../data/hospital-costs.csv")
+df = pd.read_csv("data/hospital-costs.csv")
 ````
 1.  Now, look at and familiarize yourself with the dataset you will be working with.  
 2.  Keep the official pandas documentation handy and apply generously as needed. http://pandas.pydata.org/pandas-docs/stable/
@@ -137,6 +137,6 @@ Notice the "APR DRG Description" should be unique for each hospital, however, ho
 # Extra Credit:
 Open ended question:  
 1. Gain insights from data.  
-2. Use Pandas Visualization tool (see [link](https://github.com/zipfian/dsi/tree/denver/graphing-basics) ) to plot insight  
+2. Use Pandas Visualization tool (see [link](https://github.com/zipfian/graphing-basics) ) to plot insight  
 3. Create heat map.  
 ### This is the end of the afternoon exercise.  If you have finished up early, find a data set you have always wanted to play with, and play with it.  
