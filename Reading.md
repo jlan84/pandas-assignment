@@ -770,3 +770,7 @@ Out[34]:
 360    adamsbo02    1932      1    PHI   NL    4          4    0   0    0
 403    adamsjo02    1996      1    FLO   NL    9          9    0   0    0
 ```
+
+### Convert Objects
+
+http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.convert_objects.html
