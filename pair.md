@@ -47,7 +47,7 @@ Use a groupby method on the Description column and sum the Discharges.
 
 1.  What are the top 10 reasons people are going to the hospital for, and how many people did they see.
 
-# Now, lets follow the money...
+# Now, let's follow the money...
 Now we want to see which hospital has the most money coming.
 To keep this from getting messy, lets create a new DataFrame with only the columns we care about.  
 *  Create a new DataFrame named "net" that is only the Facility Name, Total Charge, Total Cost from our original DataFrame  
@@ -65,7 +65,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 <br>
 
 
-# Now, lets focus in on *Viral Meningitis*
+# Now, let's focus in on *Viral Meningitis*
 1. Create a new dataframe that only contains the data corresponding to *Viral Meningitis*  
 	```python
 	newdf = df[df["Illness"] == "Viral Meningitis"]]
