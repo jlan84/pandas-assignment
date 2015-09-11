@@ -1,8 +1,8 @@
 # Welcome to the beautiful world of Pandas.
-You can think of pandas being very similar to Excel. Except it does not suck so bad, and you can work with bigger data.
+You can think of pandas being very similar to Excel, except is is more powerful and flexible, and enables you to work with larger data sets.
 
-# What's the deal with pandas?
-Like, why is pandas better than Excel and just python..? Here is why, homie & creator of Pandas–Wes McKinney, says he made pandas:
+Wes McKinney, creater of Pandas, has this to say about why he developed it:
+
 > I had a distinct set of requirements that were not well-addressed by any single tool at my disposal:
  * Data structures with labeled axes supporting automatic or explicit data alignment. This prevents common errors resulting from misaligned data and working with differently-indexed data coming from different sources
  * Integrated time series functionality.
