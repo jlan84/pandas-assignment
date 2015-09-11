@@ -24,8 +24,8 @@ The amount in the charge/costs columns is the price per discharge. Most hospital
 ### It is your job to calculate all the cost totals.
 1. Create a new column "Total Charges" using "Discharges" and "Mean Charge".  
 2. Do the same for the "Total Costs" using "Mean Cost".
-2. With theses two new "Total Charges" and "Total Costs" columns, calculate the markup rate.
-3. Tell me which procedure has the highest markup, and which one has the lowest markup
+2. With these two new "Total Charges" and "Total Costs" columns, calculate the charges to costs "markup" rate.
+3. Tell me which procedure has the highest "markup" rate, and which one has the lowest "markup" rate.  (It's always good to do a sanity check, do these results make sense to you?)
 
 Results:
 
