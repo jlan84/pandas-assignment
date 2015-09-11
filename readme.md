@@ -1,5 +1,5 @@
 # Welcome to the beautiful world of Pandas.
-You can think of pandas being very similar to Excel, except is is more powerful and flexible, and enables you to work with larger data sets.
+You can think of pandas as being very similar to Excel, except is is more powerful and flexible, and enables you to work with larger data sets.
 
 Wes McKinney, creater of Pandas, has this to say about why he developed it:
 
