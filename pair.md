@@ -99,7 +99,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 ---
 <br>
 
-4. Find which hospital is the least expensive for treating Moderate cases of VM **that have more than 3 Discarges**.
+4. Find which hospital is the least expensive for treating Moderate cases of VM **that have more than 3 Discharges**.
 
 |Facility Name|APR DRG Description|APR Severity of Illness Description|Discharges|Mean Charge|Median Charge|Mean Cost|
 |----|----|----|----|----|----|----|
