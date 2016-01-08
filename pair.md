@@ -1,9 +1,8 @@
 # Exploring real Health Care data using Pandas  
 
-You are a rogue data scientist living in the hood of South Brooklyn. The streets are bad enough, but what is worse is the health conditions of the projects.
-Your neighbor, who introduced himself as Bling, has been missing for the last week. Upon his return, he tells you he's been in the hospital for *Viral Meningitis*.
-That's when his brother, Bundles, begins showing symptoms of *Viral Meningitis*. Bling asks you to help him find the best hospital to go to for the least amount of cash money.
+The US famously has the most expensive healthcare system in the world.  Study after study shows that while costs for the same course of treatment vary widely between hospitals, patient outcomes are generally not correlated with these costs.  Compounding this problem is the fact that healthcare treatment and cost data are notoriously difficult to interpret.  So most people do not consider costs when seeking treatment.  However, you as a data scientist are much better equipped to do so than an average consumer.  Where would you seek treatment?  
 
+For the purposes of this sprint, let's start by focusing on a single disease: *Viral Meningitis* and how the cost of treatment varies among the hospitals in our data.  
 
 ### The first goal of this sprint is to find which hospital charges the most for treating *Viral Meningitis*.
 We will be using the data file `hospital-costs.csv` located in the data folder.
