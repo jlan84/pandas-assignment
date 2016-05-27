@@ -85,7 +85,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 
 <br>
 
-3. Find which hospital is the least expensive for treating Moderate cases of VM. [*note example below is the most expensive not the least*]
+3. Find which hospital is the least expensive (based on "Mean Charge") for treating Moderate cases of VM. [*note example below is the most expensive not the least*]
 
 
 |Facility Name|APR DRG Description|APR Severity of Illness Description|Discharges|Mean Charge|Median Charge|Mean Cost|
@@ -111,8 +111,8 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 # Data can be tricky   
 1. Which illness has the most discharges?  It seems like an easy query, but data can be tricky.
 
-Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how sever that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description".  This is annoying because it just is.
-**To account for this you have to do a double group by...**  
+Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how sever that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description" (i.e. Viral Meningitis with Moderate severity and Viral Meningitis with Minor severity should be considered two different illnesses). This is annoying because it just is.
+**To account for this you have to group by two columns...**
 *  Group the APR DRG Description with the of severity for each Illness.  
 *  What is the most expensive type of illness?  
 
