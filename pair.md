@@ -66,9 +66,9 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 
 # Now, let's focus in on *Viral Meningitis*
 1. Create a new dataframe that only contains the data corresponding to *Viral Meningitis*  
-	```python
-	newdf = df[df["Illness"] == "Viral Meningitis"]]
-	```
+```python
+newdf = df[df["Illness"] == "Viral Meningitis"]]
+```
 2. Now, with our new dataframe, only keep the data columns we care about which are:  
 `["Facility Name", "APR DRG Description","APR Severity of Illness Description","Discharges", "Mean Charge", "Median Charge", "Mean Cost"]`
 <br>
