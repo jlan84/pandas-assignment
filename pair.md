@@ -108,16 +108,6 @@ newdf = df[df["Illness"] == "Viral Meningitis"]]
 
 <br>
 
-# Data can be tricky   
-1. Which illness has the most discharges?  It seems like an easy query, but data can be tricky.
-
-Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how sever that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description" (i.e. Viral Meningitis with Moderate severity and Viral Meningitis with Minor severity should be considered two different illnesses). This is annoying because it just is.
-**To account for this you have to group by two columns...**
-*  Group the APR DRG Description with the of severity for each Illness.  
-*  What is the most expensive type of illness?  
-
----
-
 1. Find which hospital discharges the most cases of Viral Meningitis for all levels of severity.
 
 | Facility Name | ... | Discharges |
@@ -128,14 +118,21 @@ Notice the "APR DRG Description" should be unique for each hospital, however, ho
 
 <br>
 
+5. Find if there is a correlation between the severity of illness and the charge. Hint use df.corr() *http://pandas.pydata.org/pandas-docs/stable/computation.html#correlation*
 
-5. Find if there is a correlation between # of Discharges a hospital has and how much they charge. Hint use df.corr() *http://pandas.pydata.org/pandas-docs/stable/computation.html#correlation*
+---
+
+# Data can be tricky   
+1. Which illness has the most discharges?  It seems like an easy query, but data can be tricky.
+
+Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how sever that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description" (i.e. Viral Meningitis with Moderate severity and Viral Meningitis with Minor severity should be considered two different illnesses). This is annoying because it just is.
+**To account for this you have to group by two columns...**
+*  Group the APR DRG Description with the of severity for each Illness.  
+*  What is the most expensive type of illness?  
 
 ---
 
 # Extra Credit:
-Open ended question:  
-1. Gain insights from data.  
-2. Use Pandas Visualization tool (see [link](https://github.com/zipfian/graphing-basics) ) to plot insight  
-3. Create heat map.  
+Try and gain additional insights from this data.  
+
 ### This is the end of the afternoon exercise.  If you have finished up early, find a data set you have always wanted to play with, and play with it.  
