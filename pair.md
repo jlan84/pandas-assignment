@@ -25,7 +25,7 @@ The amount in the charge/costs columns is the price per discharge. Most hospital
 1. Create a new column "Total Charges" using "Discharges" and "Mean Charge".  
 2. Do the same for the "Total Costs" using "Mean Cost".
 2. With these two new "Total Charges" and "Total Costs" columns, calculate the charges to costs "markup" rate.
-3. Tell me which procedure has the highest "markup" rate, and which one has the lowest "markup" rate.  (It's always good to do a sanity check, do these results make sense to you?)
+3. Tell me which facility has the highest "markup" rate, and which one has the lowest "markup" rate.  (It's always good to do a sanity check, do these results make sense to you?)
 
     Results:
 
@@ -67,7 +67,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 1. Create a new dataframe that only contains the data corresponding to *Viral Meningitis*  
     ```python
     
-    newdf = df[df["APR DRG Description"] == "Viral Meningitis"]]
+    newdf = df[df["APR DRG Description"] == "Viral Meningitis"]
     ```
 2. Now, with our new dataframe, only keep the data columns we care about which are:  
     `["Facility Name", "APR DRG Description","APR Severity of Illness Description","Discharges", "Mean Charge", "Median Charge", "Mean Cost"]`
@@ -123,6 +123,29 @@ Notice the "APR DRG Description" should be unique for each hospital, however, ho
 
 
 # Extra Credit:
-Try and gain additional insights from this data.  
+Continue exploring this data set, or find a data set online and explore
 
-### This is the end of the afternoon exercise.  If you have finished up early, find a data set you have always wanted to play with, and play with it.  
+### Datasets
+Ways to find a dataset
+
+1. Choose one that you're already interested in.
+2. Search [OpenPrism](http://openprism.thomaslevine.com) or any open data portal.
+3. Use any of the following open datasets/portals
+  * [DHS shelter residents](https://data.cityofnewyork.us/Social-Services/DHS-Daily-Report/k46n-sa2m?)
+  * [Seattle 911 calls](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj)
+  * [Alameda County Ficticious Business Names](https://data.acgov.org/Government/Alameda-County-Fictitious-Business-Names/cav4-k67f?)
+  * [Baltimore 311 requests](https://data.baltimorecity.gov/City-Services/311-Customer-Service-Requests/9agw-sxsr)
+  * [Montgomery Public Right Of Way Permits](https://data.montgomerycountymd.gov/Community/Public-Right-Of-Way-Permits/2b9e-mbxk)
+  * [San Francisco](https://data.sfgov.org/)
+  * __[Education](https://www.edsurge.com/n/2014-01-21-education-datapalooza)__
+
+Additional datasets:
+* [Government websites click throughs](http://www.usa.gov/About/developer-resources/1usagov.shtml)
+* [Weather](http://www.wunderground.com/history/airport/KSFO/2014/1/6/DailyHistory.html)
+* [SF neighborhoods](https://data.sfgov.org/Service-Requests-311-/Neighborhoods/ejmn-jyk6)
+* [Zillow Rental](http://www.zillow.com/research/data/)
+* [SF Two Bedroom home Sales](https://data.sfgov.org/Public-Health/Two-Bedroom-Home-Sales-from-2012-in-San-Francisco-/bw6b-qwhv) 
+* [SF Rental Listings (6 Months)](https://data.sfgov.org/Public-Health/San-Francisco-Rental-Listings-06-2012-12-2012/c2ie-3fuy)
+* [US Treasury](http://treasury.io/)
+* __[Snacks!](http://www.snackdata.com/)__
+
