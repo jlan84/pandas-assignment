@@ -49,7 +49,7 @@ Use a groupby method on the 'APR DRG Description' column and sum the Discharges.
 # Now, let's follow the money...
 Now we want to see which hospital has the most money coming.
 To keep this from getting messy, lets create a new DataFrame with only the columns we care about.  
-1.  Create a new DataFrame named "net" that is only the Facility Name, Total Charge, Total Cost from our original DataFrame  
+1.  Create a new DataFrame named "net" that is only the Facility Name, Total Charges, Total Costs from our original DataFrame  
 2.  Find the total amount each hospital spent, and how much they charged. (Group your data by Facility names, and sum all the total costs and total charges)  
 3.  Now find the net income for every hospital. Tell me the most profitable and the least profitable ones and how much are they making?  
 
