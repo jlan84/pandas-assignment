@@ -42,7 +42,7 @@ The amount in the charge/costs columns is the price per discharge. Most hospital
 
 # Out of curiosity...
 I wonder what everyone is going to the hospital for...
-Use a groupby method on the Description column and sum the Discharges.
+Use a groupby method on the 'APR DRG Description' column and sum the Discharges.
 
 1.  What are the top 10 reasons people are going to the hospital for, and how many people did they see.
 
