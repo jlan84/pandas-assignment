@@ -49,7 +49,7 @@ It is your job to calculate all the cost totals.
 I wonder what everyone is going to the hospital for...
 Use a groupby method on the 'APR DRG Description' column and sum the Discharges.
 
-1.  What are the top 10 reasons people are going to the hospital for, and how many people did they see.
+1.  What are the top 10 reasons people are going to the hospital for, and how many people did they see?
 
 ## Advanced
 
@@ -130,7 +130,10 @@ Notice the "APR DRG Description" should be unique for each hospital, however, ho
 *  What is the most expensive type of illness?  
 
 
-# Extra Credit:
+## Extra Credit
+
+### Part 6: Self-guided exploration
+
 Continue exploring this data set, or find a data set online and explore
 
 ### Datasets
