@@ -1,11 +1,16 @@
-# Exploring real Health Care data using Pandas  
+# Pandas  
+
+## Introduction
 
 The US famously has the most expensive healthcare system in the world.  Study after study shows that while costs for the same course of treatment vary widely between hospitals, patient outcomes are generally not correlated with these costs.  Compounding this problem is the fact that healthcare treatment and cost data are notoriously difficult to interpret.  So most people do not consider costs when seeking treatment.  However, you as a data scientist are much better equipped to do so than an average consumer.  Where would you seek treatment?  
 
 For the purposes of this sprint, let's start by focusing on a single disease: *Viral Meningitis* and how the cost of treatment varies among the hospitals in our data.  
 
-### The first goal of this sprint is to find which hospital charges the most for treating *Viral Meningitis*.
-We will be using the data file `hospital-costs.csv` located in the data folder.
+## Basic
+
+### Part 1: Most expensive hospital for *Viral Meningitis*
+
+The first goal of this sprint is to find which hospital charges the most for treating *Viral Meningitis*. We will be using the data file `hospital-costs.csv` located in the data folder.
 
 Here is how to start off.  
 
@@ -20,8 +25,8 @@ df = pd.read_csv("data/hospital-costs.csv")
 
 The amount in the charge/costs columns is the price per discharge. Most hospitals treat many people with the same illness.  The amount they treat is the number in the "Discharges" column.
 
+It is your job to calculate all the cost totals.
 
-### It is your job to calculate all the cost totals.
 1. Create a new column "Total Charges" using "Discharges" and "Mean Charge".  
 2. Do the same for the "Total Costs" using "Mean Cost".
 2. With these two new "Total Charges" and "Total Costs" columns, calculate the charges to costs "markup" rate.
@@ -40,13 +45,16 @@ The amount in the charge/costs columns is the price per discharge. Most hospital
     | SUNY Downstate Medical Center at LICH | ... | 43088   | 2068  | 20.835590|
 
 
-# Out of curiosity...
+### Part 2: Out of curiosity
 I wonder what everyone is going to the hospital for...
 Use a groupby method on the 'APR DRG Description' column and sum the Discharges.
 
 1.  What are the top 10 reasons people are going to the hospital for, and how many people did they see.
 
-# Now, let's follow the money...
+## Advanced
+
+### Part 3: Follow the money
+
 Now we want to see which hospital has the most money coming.
 To keep this from getting messy, lets create a new DataFrame with only the columns we care about.  
 1.  Create a new DataFrame named "net" that is only the Facility Name, Total Charges, Total Costs from our original DataFrame  
@@ -63,7 +71,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 
 
 
-# Now, let's focus in on *Viral Meningitis*
+### Part 4: Focus in on *Viral Meningitis*
 1. Create a new dataframe that only contains the data corresponding to *Viral Meningitis*  
     ```python
     
@@ -113,7 +121,7 @@ To keep this from getting messy, lets create a new DataFrame with only the colum
 1. Find if there is a correlation between the severity of illness and the charge. Hint use df.corr() *http://pandas.pydata.org/pandas-docs/stable/computation.html#correlation*
 
 
-# Data can be tricky   
+### Part 5: Data can be tricky   
 1. Which illness has the most discharges?  It seems like an easy query, but data can be tricky.
 
 Notice the "APR DRG Description" should be unique for each hospital, however, hospitals also have a label for how severe that illness is.  So each illness can be listed up to four times. They are separated and labeled accordingly with the "APR Severity of Illness Description" (i.e. Viral Meningitis with Moderate severity and Viral Meningitis with Minor severity should be considered two different illnesses). This is annoying because it just is.
